@@ -1,0 +1,66 @@
+﻿@page "/profile"
+@inject NavigationManager NavManager
+
+<h1>Profile</h1>
+
+<h3>@GetAccountType() Account</h3>
+
+<p>Welcome @GetUserName()!</p>
+<div id="profile-description-container">
+    <EditForm Model="profileBioForm" id="profile-description-contents" OnValidSubmit="ChangeDescription">
+        <p>Profile Description:</p>
+        <InputText id="profile-bio" placeholder="@GetProfileDescription()" @bind-Value="profileBioForm.profileBio"></InputText>
+        <div id="profile-description-submit">
+            <input type="submit" value="Submit"/>
+        </div>
+    </EditForm>
+</div>
+
+
+<div id="profile-edit-container">
+    <button @onclick="ChangeUserName">Change Username</button>
+    <button @onclick="ChangePassowrd">Change Password</button>
+</div>
+
+
+@code {
+    //Replace with select operation form database.
+    private string accountType = "Student";
+
+    private string GetAccountType()
+    {
+        return accountType;
+    }
+
+    //Replace with select operation form database.
+    private string userName = "Scott Mumby";
+
+    private string GetUserName()
+    {
+        return userName;
+    }
+
+    //Replace with select operation form database.
+
+    Data.ProfileBioForm profileBioForm = new Data.ProfileBioForm();
+
+    private string GetProfileDescription()
+    {
+        return profileBioForm.profileBio;
+    }
+
+    private void ChangeUserName()
+    {
+        NavManager.NavigateTo("/profile/changeusername");
+    }
+
+    private void ChangePassowrd()
+    {
+        NavManager.NavigateTo("/profile/changepassword");
+    }
+
+    private void ChangeDescription()
+    {
+        
+    }
+}

@@ -1,0 +1,42 @@
+﻿@page "/profile/changeusername"
+@inject NavigationManager NavManager
+
+<h1>Profile</h1>
+
+<h3>@GetAccountType() Account</h3>
+
+<div id="profile-edit-container">
+    <EditForm Model="@userNameForm" OnSubmit="@SubmitNewUserName">
+        <InputText id="userName" placeholder="New Username" @bind-Value="userNameForm.UserName"/>
+        <InputText id="password" placeholder="Password"  @bind-Value="userNameForm.Password"/>
+
+        <button type="submit">Submit</button>
+    </EditForm>
+</div>
+
+@code {
+    //Replace with select operation form database.
+    private string accountType = "Student";
+
+    private string GetAccountType()
+    {
+        return accountType;
+    }
+
+    //Replace with select operation form database.
+    private string userName = "Scott Mumby";
+
+    private string GetUserName()
+    {
+        return userName;
+    }
+
+    Data.ProfileUserNameForm userNameForm = new Data.ProfileUserNameForm();
+
+    private void SubmitNewUserName()
+    {
+
+        //On Success
+        NavManager.NavigateTo("/profile");
+    }
+}

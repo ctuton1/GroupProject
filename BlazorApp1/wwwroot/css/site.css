@@ -59,6 +59,32 @@ a, .btn-link {
     color: white;
 }
 
-    .blazor-error-boundary::after {
-        content: "An error has occurred."
-    }
+.blazor-error-boundary::after {
+    content: "An error has occurred."
+}
+
+#profile-description-container {
+    text-align: right;
+    width: fit-content;
+}
+
+#profile-description-contents{
+    border-width: 1px;
+    border: solid;
+    width: 80vw;
+    text-align: left;
+}
+
+
+#profile-bio{
+    width: 100%;
+}
+
+#profile-description-submit{
+    margin-top: 20px;
+    text-align: right;
+}
+
+#profile-edit-container {
+    margin-top: 50px;
+}
