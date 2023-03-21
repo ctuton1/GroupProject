@@ -1,0 +1,106 @@
+﻿@page "/calender"
+@using BlazorApp1.Data
+<h1>Calendar</h1>
+<select @onchange="LoadCalender">
+    @foreach (string monthName in monthNames)
+    {
+        <option>@monthName</option>
+    }
+</select>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            @for (var dayIndex = 0; dayIndex < days.Count(); dayIndex++)
+            {
+                <th>
+                    @days[dayIndex]
+                </th>
+
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @for (var weekIndex = 0; weekIndex < weeks.Count(); weekIndex++)
+        {
+            <tr>
+                @for (int dayIndex = 0; dayIndex < weeks[weekIndex].Dates.Count(); dayIndex++)
+                {
+                    var wIndex = weekIndex;
+                    var dIndex = dayIndex;
+                    <td>
+                        @weeks[weekIndex].Dates[dayIndex].DateValue;
+                        <br /><br />
+                        <label style="color: #c00" ; font-weight : bold"> @weeks[weekIndex].Dates[dayIndex].Note</label>
+                        <br /><br />
+                        Cell Number: [@weekIndex,@dayIndex]
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+@code {
+    List<string> monthNames = new List<string>();
+    List<string> days = new List<string>();
+    List<WeekClass> weeks = new List<WeekClass>();
+    DateTime startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+    DateTime endDate = (new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)).AddMonths(1).AddDays(-1);
+    protected override void OnInitialized()
+    {
+        monthNames = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthGenitiveNames.ToList();
+        GenerateCalenderHead();
+        GenerateCalenderBody();
+    }
+    private void LoadCalender(ChangeEventArgs e)
+    {
+        var month = e.Value.ToString();
+        int monthIndex = DateTime.ParseExact(month, "MMM", System.Globalization.CultureInfo.CreateSpecificCulture("en-GB")).Month;
+        startDate = new DateTime(DateTime.Now.Year, monthIndex, 1);
+        endDate = (new DateTime(DateTime.Now.Year, monthIndex, 1)).AddMonths(1).AddDays(-1);
+        GenerateCalenderHead();
+        GenerateCalenderBody();   
+    }
+    private void GenerateCalenderHead()
+    {
+        var day1 = new List<string>();
+        for (var calDate = startDate; calDate < endDate; calDate = calDate.AddDays(1))
+        {
+            day1.Add(calDate.ToString("dddd"));
+        }
+        days = day1.Distinct().ToList();
+    }
+    private void GenerateCalenderBody()
+    {
+        weeks = new List<WeekClass>();
+        int flag = 0;
+        WeekClass week = new WeekClass();
+        List<CalanderEvent> dates = new List<CalanderEvent>();
+        var totalDays = (int)(endDate - startDate).TotalDays;
+        int countDays = 0;
+        for (var calDate = startDate; calDate <= endDate; calDate = calDate.AddDays(1))
+        {
+            flag++;
+            dates.Add(new CalanderEvent()
+                {
+                    DateValue = calDate.ToString("dd-MMM-yyyy"),
+                    DayName = calDate.ToString("dddd")
+                });
+            if (flag == 7)
+            {
+                week = new WeekClass();
+                week.Dates = dates;
+                weeks.Add(week);
+                dates = new List<CalanderEvent>();
+                flag = 0;
+            }
+            if (countDays == totalDays)
+            {
+                week = new WeekClass();
+                week.Dates = dates;
+                weeks.Add(week);
+                break;
+            }
+            countDays++;
+        }
+    }
+}
