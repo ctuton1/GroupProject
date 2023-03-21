@@ -2,6 +2,8 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    max-width: 500px;
+    margin: auto;
 }
 
 h1:focus {
@@ -20,6 +22,7 @@ a, .btn-link {
 
 .content {
     padding-top: 1.1rem;
+    width: 100%;
 }
 
 .valid.modified:not([type=checkbox]) {
@@ -64,27 +67,61 @@ a, .btn-link {
 }
 
 #profile-description-container {
-    text-align: right;
-    width: fit-content;
+    text-align: center;
+    width: 100%;
 }
 
 #profile-description-contents{
-    border-width: 1px;
-    border: solid;
-    width: 80vw;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 4px 4px 4px;
+    width: 100%;
     text-align: left;
 }
 
 
-#profile-bio{
+#profile-bio {
     width: 100%;
+    height: 200px;
+    border: 0;
+    box-shadow: #808080 inset 1px 1px 15px;
+    border-radius: 7px;
 }
 
 #profile-description-submit{
     margin-top: 20px;
-    text-align: right;
+    text-align: center;
 }
+    #profile-description-submit input {
+        background-color: #FFB48A;
+    }
 
 #profile-edit-container {
     margin-top: 50px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 4px 4px 4px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center
+}
+#profile-edit-container button {
+    background-color: #FFB48A;
+}
+
+#profile-background {
+    background-color: #FFB48A;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center
+
+}
+.rounded-profile {
+    margin-top:50px;
+    border-radius: 30px 30px 0px 0px;
 }

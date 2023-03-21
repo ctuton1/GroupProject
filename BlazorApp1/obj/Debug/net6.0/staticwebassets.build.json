@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h8oHUskLF+9SS+xWQ8xd7SZv9ZRgoj1Ol1SDyaPL8EI=",
+  "Hash": "fMnr+feNBmEqt3cDs6qebKltpSv+NPQ3no3AfNvac0M=",
   "Source": "BlazorApp1",
   "BasePath": "_content/BlazorApp1",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\Assets\\Hamburger Menu.svg",
+      "SourceId": "BlazorApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
+      "BasePath": "_content/BlazorApp1",
+      "RelativePath": "Assets/Hamburger Menu.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Hamburger Menu.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\Assets\\Profile Icon.svg",
+      "SourceId": "BlazorApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
+      "BasePath": "_content/BlazorApp1",
+      "RelativePath": "Assets/Profile Icon.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Profile Icon.svg"
     },
     {
       "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css",

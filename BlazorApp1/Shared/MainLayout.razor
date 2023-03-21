@@ -1,19 +1,49 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager NavManager
 
 <PageTitle>BlazorApp1</PageTitle>
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        <div class="top-row w-100" m-0 p-0>
+            <a href="" class="ml-0" @onclick="HomePage">Home</a>
+            <a href="" @onclick="Societies">Societies</a>
+            <a href="" @onclick="Venues">Venues</a>
+            <a href="" @onclick="Friends">Friends</a>
+            <a href="" @onclick="Profile">Profile</a>
+            <a href="" @onclick="Calendar">Calendar</a>
         </div>
 
-        <article class="content px-4">
+        <article class="content p-0">
             @Body
         </article>
     </main>
 </div>
+
+@code{
+    private void HomePage()
+    {
+        NavManager.NavigateTo("/");
+    }
+    private void Societies()
+    {
+        NavManager.NavigateTo("/");
+    }
+    private void Venues()
+    {
+        NavManager.NavigateTo("/");
+    }
+    private void Friends()
+    {
+        NavManager.NavigateTo("/");
+    }
+    private void Profile()
+    {
+        NavManager.NavigateTo("/Profile");
+    }
+    private void Calendar()
+    {
+        NavManager.NavigateTo("/");
+    }
+}
