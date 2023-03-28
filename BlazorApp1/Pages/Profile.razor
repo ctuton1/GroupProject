@@ -1,0 +1,87 @@
+﻿@page "/profile"
+@inject NavigationManager NavManager
+
+<head>
+</head>
+<body>
+
+    <div id="profile-background">
+        <div id="profile-bar" class="m-x-5 w-75 bg-white rounded-3 m-5 d-lg-flex flex-row justify-content-between p-1 flex-nowrap">
+            <div class="w-25 p-1 d-flex align-items-center justify-content-center flex-nowrap">
+                <img class="h-100" src="assets/Profile Icon.svg" />
+            </div>
+            <div class="p-1 d-flex flex-column align-items-center justify-content-center text-end flex-nowrap">
+                <h2 class="m-0">@GetUserName()</h2>
+
+                <p class="m-0">@GetAccountType() Account</p>
+            </div>
+        </div>
+
+        <div class="m-x-5 w-100 bg-white rounded-profile p-3">
+
+
+           
+            <div id="profile-description-container">
+                <EditForm Model="profileBioForm" id="profile-description-contents" OnValidSubmit="ChangeDescription">
+                    <h2 class="text-center fw-bold">About:</h2>
+                    <InputTextArea id="profile-bio" placeholder="@GetProfileDescription()" @bind-Value="profileBioForm.profileBio"></InputTextArea>
+                    <div id="profile-description-submit">
+                        <input class="rounded-3" type="submit" value="Submit" />
+                    </div>
+                </EditForm>
+            </div>
+
+
+            <div id="profile-edit-container">
+                <button class="d-flex" @onclick="ChangeUserName">Change Username</button>
+                <button class="d-flex" @onclick="ChangePassowrd">Change Password</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+
+@code {
+    //Replace with select operation form database.
+    private string accountType = "Student";
+
+    private string GetAccountType()
+    {
+        return accountType;
+    }
+
+    //Replace with select operation form database.
+    private string userName = "Scott Mumby";
+
+    private string GetUserName()
+    {
+        return userName;
+    }
+
+    //Replace with select operation form database.
+
+    Data.ProfileBioForm profileBioForm = new Data.ProfileBioForm();
+
+    private string GetProfileDescription()
+    {
+        return profileBioForm.profileBio;
+    }
+
+    private void ChangeUserName()
+    {
+        NavManager.NavigateTo("/profile/changeusername");
+    }
+
+    private void ChangePassowrd()
+    {
+        NavManager.NavigateTo("/profile/changepassword");
+    }
+
+    private void ChangeDescription()
+    {
+
+    }
+}

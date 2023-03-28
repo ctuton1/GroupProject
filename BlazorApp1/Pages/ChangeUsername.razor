@@ -1,0 +1,54 @@
+﻿@page "/profile/changeusername"
+@inject NavigationManager NavManager
+
+<div id="profile-background">
+    <div id="profile-bar" class="m-x-5 w-75 bg-white rounded-3 m-5 d-lg-flex flex-row justify-content-between p-1 flex-nowrap">
+        <div class="w-25 p-1 d-flex align-items-center justify-content-center flex-nowrap">
+            <img class="h-100" src="assets/Profile Icon.svg" />
+        </div>
+        <div class="p-1 d-flex flex-column align-items-center justify-content-center text-end flex-nowrap">
+            <h2 class="m-0">@GetUserName()</h2>
+
+            <p class="m-0">@GetAccountType() Account</p>
+        </div>
+    </div>
+
+    <div id="profile-description-container" class="m-x-5 w-100 bg-white rounded-profile p-3">
+        <h2 class="text-center fw-bold">Change Username:</h2>
+        <div id="profile-edit-container" class="justify-content-center text-center">
+            <EditForm Model="@userNameForm" OnSubmit="@SubmitNewUserName">
+                <InputText id="userName" class="d-block mb-2" placeholder="New Username" @bind-Value="userNameForm.UserName" />
+                <InputText id="password" class="d-block mb-2" placeholder="Password" @bind-Value="userNameForm.Password" />
+
+                <button type="submit">Submit</button>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+    //Replace with select operation form database.
+    private string accountType = "Student";
+
+    private string GetAccountType()
+    {
+        return accountType;
+    }
+
+    //Replace with select operation form database.
+    private string userName = "Scott Mumby";
+
+    private string GetUserName()
+    {
+        return userName;
+    }
+
+    Data.ProfileUserNameForm userNameForm = new Data.ProfileUserNameForm();
+
+    private void SubmitNewUserName()
+    {
+
+        //On Success
+        NavManager.NavigateTo("/profile");
+    }
+}

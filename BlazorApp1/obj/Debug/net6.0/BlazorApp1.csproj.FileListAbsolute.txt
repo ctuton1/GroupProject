@@ -30,70 +30,65 @@ C:\Users\668392\source\repos\Project\BlazorApp1\obj\Debug\net6.0\refint\BlazorAp
 C:\Users\668392\source\repos\Project\BlazorApp1\obj\Debug\net6.0\BlazorApp1.pdb
 C:\Users\668392\source\repos\Project\BlazorApp1\obj\Debug\net6.0\BlazorApp1.genruntimeconfig.cache
 C:\Users\668392\source\repos\Project\BlazorApp1\obj\Debug\net6.0\ref\BlazorApp1.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\appsettings.json
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.staticwebassets.runtime.json
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.exe
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.deps.json
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.runtimeconfig.json
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.pdb
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Humanizer.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.Identity.Client.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\System.Drawing.Common.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\System.Runtime.Caching.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\System.Security.Permissions.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\System.Windows.Extensions.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.csproj.AssemblyReference.cache
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.AssemblyInfoInputs.cache
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.AssemblyInfo.cs
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.csproj.CoreCompileInputs.cache
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.RazorAssemblyInfo.cache
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.RazorAssemblyInfo.cs
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\staticwebassets\msbuild.BlazorApp1.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\staticwebassets\msbuild.build.BlazorApp1.props
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.BlazorApp1.props
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.BlazorApp1.props
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\scopedcss\bundle\BlazorApp1.styles.css
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\scopedcss\projectbundle\BlazorApp1.bundle.scp.css
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.csproj.CopyComplete
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\refint\BlazorApp1.dll
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.pdb
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.genruntimeconfig.cache
-C:\Users\owner\OneDrive\Documents\design develop deploy\trimester2\groupProject\BlazorApp1\obj\Debug\net6.0\ref\BlazorApp1.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\appsettings.json
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.staticwebassets.runtime.json
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.exe
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.deps.json
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.runtimeconfig.json
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\ref\BlazorApp1.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\BlazorApp1.pdb
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.csproj.AssemblyReference.cache
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.AssemblyInfoInputs.cache
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.AssemblyInfo.cs
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.csproj.CoreCompileInputs.cache
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.RazorAssemblyInfo.cache
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.RazorAssemblyInfo.cs
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\scopedcss\bundle\BlazorApp1.styles.css
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\scopedcss\projectbundle\BlazorApp1.bundle.scp.css
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.csproj.CopyComplete
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\ref\BlazorApp1.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.pdb
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\obj\Debug\net6.0\BlazorApp1.genruntimeconfig.cache
