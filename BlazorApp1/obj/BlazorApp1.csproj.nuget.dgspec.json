@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "C:\\Users\\579938\\Source\\Repos\\GroupProject\\BlazorApp1\\BlazorApp1.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\579938\\Source\\Repos\\GroupProject\\BlazorApp1\\BlazorApp1.csproj",
         "packagesPath": "C:\\Users\\579938\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\579938\\Source\\Repos\\GroupProject\\BlazorApp1\\obj\\",
+=======
+    "C:\\Users\\firne\\Source\\Repos\\GroupProject2\\BlazorApp1\\BlazorApp1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\firne\\Source\\Repos\\GroupProject2\\BlazorApp1\\BlazorApp1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\firne\\Source\\Repos\\GroupProject2\\BlazorApp1\\BlazorApp1.csproj",
+        "projectName": "BlazorApp1",
+        "projectPath": "C:\\Users\\firne\\Source\\Repos\\GroupProject2\\BlazorApp1\\BlazorApp1.csproj",
+        "packagesPath": "C:\\Users\\firne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\firne\\Source\\Repos\\GroupProject2\\BlazorApp1\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< Updated upstream
           "C:\\Users\\579938\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\firne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -62,7 +80,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< Updated upstream
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
         }
       }
     }
