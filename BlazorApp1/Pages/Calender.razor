@@ -1,39 +1,69 @@
 ﻿@page "/calender"
-@inject NavigationManager NavManager
 @using BlazorApp1.Data
 <h1>Calendar</h1>
-<select @onchange="LoadCalender">
-    @foreach (string monthName in monthNames)
-    {
-        <option>@monthName</option>
-    }
+
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid white;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            background-color: #96D4D4;
+        }
+
+    </style>
+</head>
+
+<label for="months">Select a month:</label>
+
+
+<select name="month" id="month" @onchange="LoadCalender">
+
+    <option value="" selected disabled hidden>Choose here</option>
+    <option value=01>January</option>
+    <option value=02>February</option>
+    <option value=03>March</option>
+    <option value=04>April</option>
+    <option value=05>May</option>
+    <option value=06>June</option>
+    <option value=07>July</option>
+    <option value=08>August</option>
+    <option value=09>September</option>
+    <option value=10>October</option>
+    <option value=11>November</option>
+    <option value=12>December</option>
 </select>
-<table class="table table-bordered table-striped">
+
+
+<table>
     <thead>
         <tr>
-            @for (var dayIndex = 0; dayIndex < days.Count(); dayIndex++)
-            {
-                <th>
-                    @days[dayIndex]
-                </th>
-
-            }
+            <th>@days[0]</th>
+            <th>@days[1]</th>
+            <th>@days[2]</th>
+            <th>@days[3]</th>
+            <th>@days[4]</th>
+            <th>@days[5]</th>
+            <th>@days[6]</th>
         </tr>
     </thead>
+
     <tbody>
+
         @for (var weekIndex = 0; weekIndex < weeks.Count(); weekIndex++)
         {
+
             <tr>
-                @for (int dayIndex = 0; dayIndex < weeks[weekIndex].Dates.Count(); dayIndex++)
+                @for (var dayIndex = 0; dayIndex < weeks[weekIndex].Dates.Count(); dayIndex++)
                 {
-                    var wIndex = weekIndex;
-                    var dIndex = dayIndex;
+                    int day = weekIndex * 7 + (dayIndex + 1);
                     <td>
-                        @weeks[weekIndex].Dates[dayIndex].DateValue;
-                        <br /><br />
-                        <label style="color: #c00" ; font-weight : bold"> @weeks[weekIndex].Dates[dayIndex].Note</label>
-                        <br /><br />
-                        Cell Number: [@weekIndex,@dayIndex]
+                        @day
+
+
+                        @* [@weekIndex@dayIndex]*@
                     </td>
                 }
             </tr>
@@ -41,25 +71,27 @@
     </tbody>
 </table>
 @code {
-    List<string> monthNames = new List<string>();
+    string[] monthNames = new string[11];
     List<string> days = new List<string>();
     List<WeekClass> weeks = new List<WeekClass>();
     DateTime startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
     DateTime endDate = (new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)).AddMonths(1).AddDays(-1);
     protected override void OnInitialized()
     {
-        monthNames = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthGenitiveNames.ToList();
+        //monthNames = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthGenitiveNames.ToArray();
         GenerateCalenderHead();
         GenerateCalenderBody();
     }
+
     private void LoadCalender(ChangeEventArgs e)
     {
-        var month = e.Value.ToString();
-        int monthIndex = DateTime.ParseExact(month, "MMM", System.Globalization.CultureInfo.CreateSpecificCulture("en-GB")).Month;
+        var monthValue = e.Value;
+        var month = monthValue.ToString();
+        int monthIndex = DateTime.ParseExact(month, "MM", System.Globalization.CultureInfo.CreateSpecificCulture("en-GB")).Month;
         startDate = new DateTime(DateTime.Now.Year, monthIndex, 1);
         endDate = (new DateTime(DateTime.Now.Year, monthIndex, 1)).AddMonths(1).AddDays(-1);
         GenerateCalenderHead();
-        GenerateCalenderBody();   
+        GenerateCalenderBody();
     }
     private void GenerateCalenderHead()
     {
