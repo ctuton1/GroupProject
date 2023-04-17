@@ -11,13 +11,7 @@
 
         public string lastName { get; set; }
 
-        public AccountTypes accountType { get; set; }
+        public string accountType { get; set; }
 
-
-        public enum AccountTypes
-        {
-            Student,
-            Society
-        }
     }
 }

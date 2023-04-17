@@ -26,6 +26,7 @@
     </div>
 
 @code {
+
     //Replace with select operation form database.
     private string accountType = "Student";
 
@@ -53,6 +54,7 @@
 
     private void FormSubmit()
     {
-        
+        Data.MySQLDB db = new Data.MySQLDB();
+        db.CreateUser(cA.userName, cA.password, cA.firstName, cA.lastName, cA.accountType);
     }
 }
