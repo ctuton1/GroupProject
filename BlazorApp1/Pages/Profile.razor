@@ -6,6 +6,7 @@
 <body>
 
     <div id="profile-background">
+
         <div id="profile-bar" class="m-x-5 w-75 bg-white rounded-3 m-5 d-lg-flex flex-row justify-content-between p-1 flex-nowrap">
             <div class="w-25 p-1 d-flex align-items-center justify-content-center flex-nowrap">
                 <img class="h-100" src="assets/Profile Icon.svg" />
@@ -17,7 +18,7 @@
             </div>
         </div>
 
-        <div class="m-x-5 w-100 bg-white rounded-profile p-3">
+        <div id="profile-body-container" class="m-x-5 w-100 bg-white rounded-profile p-3">
 
 
            
@@ -33,9 +34,12 @@
 
 
             <div id="profile-edit-container">
-                <button class="d-flex" @onclick="ChangeUserName">Change Username</button>
-                <button class="d-flex" @onclick="ChangePassowrd">Change Password</button>
+                <button class="d-flex rounded-3 m-1" @onclick="ChangeUserName">Change Username</button>
+                <button class="d-flex rounded-3 m-1" @onclick="ChangePassowrd">Change Password</button>
+                <button class="d-flex rounded-3 m-1" @onclick="ChangePhoto">Change Photo</button>
             </div>
+
+            
         </div>
     </div>
 
@@ -80,8 +84,13 @@
         NavManager.NavigateTo("/profile/changepassword");
     }
 
+    private void ChangePhoto()
+    {
+        NavManager.NavigateTo("/profile/changephoto");
+    }
+
     private void ChangeDescription()
     {
-
     }
+
 }

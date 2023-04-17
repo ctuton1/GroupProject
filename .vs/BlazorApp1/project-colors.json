@@ -5,7 +5,27 @@
       "ProjectGuid": "d7a51bc1-a0f9-4201-8118-7b1c2351d016",
       "DisplayName": "BlazorApp1",
       "ColorIndex": 0
+    },
+    "feead2a3-6f97-44fe-8cd8-c6a0aa26152d": {
+      "ProjectGuid": "feead2a3-6f97-44fe-8cd8-c6a0aa26152d",
+      "DisplayName": "SocietyApi",
+      "ColorIndex": 1
+    },
+    "78334f8d-c0a4-43da-9328-6b117e192f57": {
+      "ProjectGuid": "78334f8d-c0a4-43da-9328-6b117e192f57",
+      "DisplayName": "Api",
+      "ColorIndex": 2
+    },
+    "616ff4f2-8c01-41ac-ad20-b14b2495f7cb": {
+      "ProjectGuid": "616ff4f2-8c01-41ac-ad20-b14b2495f7cb",
+      "DisplayName": "DataAccess",
+      "ColorIndex": 3
+    },
+    "2024bad3-8155-4381-8925-8c67507b6991": {
+      "ProjectGuid": "2024bad3-8155-4381-8925-8c67507b6991",
+      "DisplayName": "DataApi",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 5
 }
