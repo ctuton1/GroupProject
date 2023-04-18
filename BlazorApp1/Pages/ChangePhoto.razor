@@ -10,7 +10,7 @@
 
     <div id="profile-background">
 
-        <img class="h-50 w-50 rounded-circle profile-bar" src="@GetProfilePhoto()" />
+        <img class="rounded-circle" id="change-photo-img" src="@GetProfilePhoto()" />
 
 
         <div id="profile-body-container" class="m-x-5 w-100 bg-white rounded-profile p-3">
@@ -66,18 +66,19 @@
         {
             try
             {
-                
-                    string newFileName = Path.ChangeExtension( //create file name
-                Path.GetRandomFileName(),
-                Path.GetExtension(file.Name));
 
-                    string path = Path.Combine("wwwroot\\userphotos\\", newFileName); //Create file path
+                string newFileName = Path.ChangeExtension( //create file name
+            Path.GetRandomFileName(),
+            Path.GetExtension(file.Name));
 
-                    await using FileStream fs = new(path, FileMode.Create); //Open file
-                    await file.OpenReadStream(maxFileSize).CopyToAsync(fs); //Write file
-                    MySQLDB db = new MySQLDB();
-                    db.UpdateUserPhoto(newFileName, Convert.ToInt32(userId));
-                    db.CloseConnection();
+                string path = Path.Combine("wwwroot\\userphotos\\", newFileName); //Create file path
+
+                await using FileStream fs = new(path, FileMode.Create); //Open file
+                await file.OpenReadStream(maxFileSize).CopyToAsync(fs); //Write file
+                MySQLDB db = new MySQLDB();
+                db.UpdateUserPhoto(newFileName, Convert.ToInt32(userId));
+                db.CloseConnection();
+                NavManager.NavigateTo("/profile");
 
             }
             catch (Exception ex)
@@ -99,9 +100,10 @@
         return src;
     }
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await GetSessionUser();
+        StateHasChanged();
     }
 
     private async Task GetSessionUser()

@@ -17,7 +17,7 @@ namespace BlazorApp1.Data
             con.Open();
         }
 
-        ProfileBioForm GetProfileBio(int userId)
+        public ProfileBioForm GetProfileBio(int userId)
         {
             OpenConnection();
 
@@ -30,8 +30,17 @@ namespace BlazorApp1.Data
             using var cmd = new MySqlCommand(sql, con);
 
             using MySqlDataReader rdr = cmd.ExecuteReader();
-
-            form.profileBio = rdr.GetString(0);
+            if(rdr.Read())
+            {
+                if(!rdr.IsDBNull(0))
+                {
+                    form.profileBio = rdr.GetString(0);
+                }
+                else
+                {
+                    form.profileBio = "";
+                }
+            }
 
             CloseConnection();
 
@@ -63,6 +72,7 @@ namespace BlazorApp1.Data
                 CloseConnection();
                 return Convert.ToInt32(s);
             }
+            CloseConnection();
             return -1;
         }
 
@@ -76,8 +86,17 @@ namespace BlazorApp1.Data
                 var cmd = new MySqlCommand(pCSQL, con);
 
                 MySqlDataReader rdr = cmd.ExecuteReader();
-                CloseConnection();
-                return true;
+                if(rdr.HasRows)
+                {
+                    CloseConnection();
+                    return true;
+                }
+                else
+                {
+                    CloseConnection();
+                    return false;
+                }
+                
             }
             catch
             {
@@ -100,6 +119,7 @@ namespace BlazorApp1.Data
                     accountTypeID = 5; //change for server
                     break;
                 default:
+                    CloseConnection();
                     return false;
             }
 
@@ -118,25 +138,129 @@ namespace BlazorApp1.Data
         }
         public void UpdateUserBio(string userBio, int userId)
         {
-            //Write user bio to db
             OpenConnection();
 
+            string sql = string.Format($"UPDATE userdetails SET userBio = '{userBio}' where userid = '{userId}';");
+            MySqlCommand command = con.CreateCommand();
+            command.CommandText = sql;
+            command.ExecuteNonQuery();
             CloseConnection();
         }
 
-        public void UpdateUsername(string username, int userId)
+        public string UpdateUsername(string username, int userId)
         {
-            //Write new username to db
+            if (CheckIfUsernameExists(username))
+            {
+                CloseConnection();
+                return "Username exists";
+            }
             OpenConnection();
-
+            string sql = string.Format($"UPDATE UserLogin SET username = '{username}' where userid = '{userId}';");
+            MySqlCommand command = con.CreateCommand();
+            command.CommandText = sql;
+            command.ExecuteNonQuery();
             CloseConnection();
+            return "updated";
+        }
+
+        public string GetName(int userId)
+        {
+            OpenConnection();
+            string sql = string.Format($"SELECT FirstName, LastName FROM UserDetails Where UserId = '{userId}';");
+            var cmd = new MySqlCommand(sql, con);
+
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            string firstName = "";
+            string lastName = "";
+            if (rdr.Read())
+            {
+                firstName = rdr.GetString(0);
+                lastName = rdr.GetString(1);
+            }
+            CloseConnection();
+            return firstName + " " + lastName;
+        }
+
+        public bool CheckIfUsernameExists(string username)
+        {
+            OpenConnection();
+            string sql = string.Format($"SELECT Username FROM UserLogin Where Username = '{username}';");
+            var cmd = new MySqlCommand(sql, con);
+
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            if(rdr.Read())
+            {
+                if (!rdr.IsDBNull(0))
+                {
+                    CloseConnection();
+                    return true;
+                }
+                else
+                {
+                    CloseConnection();
+                    return false;
+                }
+            }
+            CloseConnection();
+            return false;
+        }
+
+        public string GetUserName(int userId)
+        {
+            OpenConnection();
+            string sql = string.Format($"SELECT Username FROM UserLogin Where UserId = '{ userId}';");
+            var cmd = new MySqlCommand(sql, con);
+
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            string UserName = "";
+            if (rdr.Read())
+            {
+                UserName = rdr.GetString(0);
+            }
+            CloseConnection();
+            return UserName;
+        }
+
+        public string GetPassword(int userId)
+        {
+            OpenConnection();
+            string sql = string.Format($"SELECT userPassword FROM UserLogin Where UserId = '{ userId}';");
+            var cmd = new MySqlCommand(sql, con);
+
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            string Password = "";
+            if (rdr.Read())
+            {
+                Password = rdr.GetString(0);
+            }
+            CloseConnection();
+            return Password;
+        }
+
+        public string GetAccountType(int userId)
+        {
+            OpenConnection();
+            string sql = string.Format($"SELECT b.UserTypeTitle FROM UserDetails as a INNER JOIN UserTypes as b on a.UserTypeID = b.UserTypeID Where a.UserId = '{ userId}';");
+            var cmd = new MySqlCommand(sql, con);
+
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            string result = "";
+            if (rdr.Read())
+            {
+                result = rdr.GetString(0);
+            }
+            CloseConnection();
+            return result;
         }
 
         public void UpdatePassword(string password, int userId)
         {
-            //Write new password to db
             OpenConnection();
 
+            string sql = string.Format($"UPDATE UserLogin SET userpassword = '{password}' where userid = '{userId}';");
+            MySqlCommand command = con.CreateCommand();
+            command.CommandText = sql;
+            command.ExecuteNonQuery();
             CloseConnection();
         }
 
@@ -150,17 +274,47 @@ namespace BlazorApp1.Data
             string s = "";
             if (rdr.Read())
             {
-                try
+                if(!rdr.IsDBNull(0))
                 {
                     s = rdr.GetString(0);
                 }
-                catch
+                else
                 {
                     s = "default.png";
                 }
             }
             CloseConnection();
             return s;
+        }
+
+        public List<SocietyBarModel> GetAllSocieties()
+        {
+            OpenConnection();
+            List<SocietyBarModel> result = new List<SocietyBarModel>();
+            List<int> userId = new List<int>();
+            string sql = string.Format($"SELECT a.userid from Userdetails AS a INNER JOIN Usertypes AS b on a.UserTypeId = b.UserTypeId WHERE b.Usertypetitle = 'Society';");
+            var cmd = new MySqlCommand(sql, con);
+
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            int count = rdr.FieldCount;
+            while (rdr.Read())
+            {
+                for(int i = 0; i < count; i++)
+                {
+                    userId.Add(Convert.ToInt32(rdr.GetString(0)));
+                }
+            }
+            CloseConnection();
+            foreach (int iD in userId)
+            {
+                SocietyBarModel temp = new SocietyBarModel();
+                temp.Id = iD;
+                temp.UserName = GetUserName(iD);
+                temp.Bio = GetProfileBio(iD).profileBio;
+                temp.Photo = $"userphotos\\{GetProfilePhoto(iD)}";
+                result.Add(temp);
+            }
+            return result;
         }
 
         public void CloseConnection()

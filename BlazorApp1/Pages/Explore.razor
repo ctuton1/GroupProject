@@ -1,0 +1,36 @@
+﻿@page "/Explore"
+@inject NavigationManager NavManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+
+<head>
+</head>
+<body>
+
+    <div id="profile-background" class="min-vh-100">
+        <div id="event-widget" class=" my-2 bg-white rounded-3 d-lg-flex flex-row justify-content-between p-1 text-center">
+
+        </div>
+        
+    </div>
+
+</body>
+
+
+
+
+@code {
+
+    string userId;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await GetSessionUser();
+        StateHasChanged();
+    }
+
+    private async Task GetSessionUser()
+    {
+        userId = await sessionStorage.GetItemAsync<String>("userId");
+    }
+
+}

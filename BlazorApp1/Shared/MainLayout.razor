@@ -1,5 +1,7 @@
 ﻿@inherits LayoutComponentBase
 @inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <PageTitle>BlazorApp1</PageTitle>
 
@@ -8,9 +10,18 @@
     <main>
         <div class="top-row w-100 justify-content-center" m-0 p-0>
             <a href="" class="ml-0" @onclick="HomePage">Home</a>
-            <a href="" @onclick="HomePage">Explore</a> <!--CHANGE WHEN Explore PAGE IS Added-->
-            <a href="" @onclick="Profile">Profile</a>
-            <a href="" @onclick="Calendar">Calendar</a> <!--CHANGE WHEN CALENDER PAGE IS FIXED-->
+            <a href="" @onclick="Explore">Explore</a> <!--CHANGE WHEN Explore PAGE IS Added-->
+            <a href="" @onclick="Societies">Societies</a>
+            <a href="" @onclick="Calendar">Calendar</a>
+            @if(signedIn)
+            {
+                <a href="" @onclick="Profile"><img id="small-profile-img" src="@GetProfilePhoto()" /></a>
+            }
+            else
+            {
+                <a href="" @onclick="SignIn">Sign In</a>
+                <a href="" @onclick="CreateAccount">Create Account</a>
+            }
         </div>
 
         <article class="content p-0">
@@ -20,21 +31,40 @@
 </div>
 
 @code{
+    bool signedIn = false;  
+
+    string userId;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await GetSessionUser();
+        StateHasChanged();
+    }
+
+    private async Task GetSessionUser()
+    {
+        userId = await sessionStorage.GetItemAsync<String>("userId");
+        if (userId != null)
+        {
+            signedIn = true;
+        }
+        else
+        {
+            signedIn = false;
+        }
+    }
+
     private void HomePage()
     {
         NavManager.NavigateTo("/");
     }
+    private void Explore()
+    {
+        NavManager.NavigateTo("/Explore");
+    }
     private void Societies()
     {
-        NavManager.NavigateTo("/");
-    }
-    private void Venues()
-    {
-        NavManager.NavigateTo("/");
-    }
-    private void Friends()
-    {
-        NavManager.NavigateTo("/");
+        NavManager.NavigateTo("/Societies");
     }
     private void Profile()
     {
@@ -43,5 +73,24 @@
     private void Calendar()
     {
         NavManager.NavigateTo("/Calender");
+    }
+    private void SignIn()
+    {
+        NavManager.NavigateTo("/Signin");
+    }
+
+    private void CreateAccount()
+    {
+        NavManager.NavigateTo("/CreateAccount");
+    }
+
+     private string GetProfilePhoto()
+    {
+
+        Data.MySQLDB db = new Data.MySQLDB();
+        string photoName = db.GetProfilePhoto(Convert.ToInt32(userId));
+        Console.WriteLine(photoName);
+        string src = $"userphotos\\{photoName}";
+        return src;
     }
 }

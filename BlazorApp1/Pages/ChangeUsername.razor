@@ -1,54 +1,125 @@
 ﻿@page "/profile/changeusername"
 @inject NavigationManager NavManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <div id="profile-background">
     <div id="profile-bar" class="m-x-5 w-75 bg-white rounded-3 m-5 d-lg-flex flex-row justify-content-between p-1 flex-nowrap">
         <div class="w-25 p-1 d-flex align-items-center justify-content-center flex-nowrap">
-            <img class="h-100" src="assets/Profile Icon.svg" />
+            <img id="profile-img" src="@GetProfilePhoto()" />
         </div>
         <div class="p-1 d-flex flex-column align-items-center justify-content-center text-end flex-nowrap">
-            <h2 class="m-0">@GetUserName()</h2>
+            <p class="m-0">@GetUserName()</p>
+            <h2 class="m-0">@GetName()</h2>
 
             <p class="m-0">@GetAccountType() Account</p>
         </div>
     </div>
+    <div id="profile-body-container" class="m-x-5 w-100 bg-white rounded-profile p-3">
+        <div id="profile-description-container">
+            <h2 class="text-center fw-bold">Change Username:</h2>
+            <div id="profile-edit-container" class="justify-content-center text-center">
+                <EditForm Model="@userNameForm" OnSubmit="@SubmitNewUserName">
+                    <InputText id="userName" class="d-block mb-2" placeholder="New Username" @bind-Value="userNameForm.UserName" />
+                    <InputText id="password" class="d-block mb-2" placeholder="Password" @bind-Value="userNameForm.Password" />
 
-    <div id="profile-description-container" class="m-x-5 w-100 bg-white rounded-profile p-3">
-        <h2 class="text-center fw-bold">Change Username:</h2>
-        <div id="profile-edit-container" class="justify-content-center text-center">
-            <EditForm Model="@userNameForm" OnSubmit="@SubmitNewUserName">
-                <InputText id="userName" class="d-block mb-2" placeholder="New Username" @bind-Value="userNameForm.UserName" />
-                <InputText id="password" class="d-block mb-2" placeholder="Password" @bind-Value="userNameForm.Password" />
-
-                <button type="submit">Submit</button>
-            </EditForm>
+                    <button type="submit">Submit</button>
+                </EditForm>
+                @if (errors.Count > 0)
+                {
+                    <ul class="text-danger">
+                        @foreach (var error in errors)
+                        {
+                            <li>@error</li>
+                        }
+                    </ul>
+                }
+            </div>
         </div>
     </div>
 </div>
 
 @code {
-    //Replace with select operation form database.
-    private string accountType = "Student";
-
+    private List<string> errors = new();
     private string GetAccountType()
     {
-        return accountType;
+        Data.MySQLDB db = new Data.MySQLDB();
+        return db.GetAccountType(Convert.ToInt32(userId));
     }
 
-    //Replace with select operation form database.
-    private string userName = "Scott Mumby";
+    private string GetName()
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+
+        return db.GetName(Convert.ToInt32(userId));
+    }
 
     private string GetUserName()
     {
-        return userName;
+        Data.MySQLDB db = new Data.MySQLDB();
+
+        return "@" + db.GetUserName(Convert.ToInt32(userId));
     }
 
     Data.ProfileUserNameForm userNameForm = new Data.ProfileUserNameForm();
 
     private void SubmitNewUserName()
     {
+        Data.MySQLDB db1 = new Data.MySQLDB();
+        if (userNameForm.Password == db1.GetPassword(Convert.ToInt32(userId)))
+        {
+            if (userNameForm.UserName == "" || userNameForm.UserName == null)
+            {
+                errors.Add($"Error: Username cannot be empty");
+                return;
+            }
+            else
+            {
+                Data.MySQLDB db2 = new Data.MySQLDB();
 
-        //On Success
-        NavManager.NavigateTo("/profile");
+                string update = db2.UpdateUsername(userNameForm.UserName, Convert.ToInt32(userId));
+
+
+                if (update == "Username exists")
+                {
+                    errors.Add($"Error: Username already exists");
+                    return;
+                }
+                else
+                {
+                    NavManager.NavigateTo("/profile");
+                }
+            }
+        }
+        else
+        {
+            errors.Add($"Error: Password Incorrect");
+            return;
+        }
+
+
     }
-}
+
+    string userId;
+
+    private string GetProfilePhoto()
+    {
+
+        Data.MySQLDB db = new Data.MySQLDB();
+        string photoName = db.GetProfilePhoto(Convert.ToInt32(userId));
+        Console.WriteLine(photoName);
+        string src = $"userphotos\\{photoName}";
+        return src;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await GetSessionUser();
+        StateHasChanged();
+    }
+
+    private async Task GetSessionUser()
+    {
+        userId = await sessionStorage.GetItemAsync<String>
+    ("userId");
+    }
+    }

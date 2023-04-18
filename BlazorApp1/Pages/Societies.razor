@@ -1,0 +1,79 @@
+﻿@page "/Societies"
+@inject NavigationManager NavManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+
+<head>
+</head>
+<body>
+
+    <div id="profile-background" class="min-vh-100">
+        <div id="society-bar" class=" my-2 bg-white rounded-3 d-lg-flex flex-row justify-content-between p-1 text-center">
+            <h2>Societies:</h2>
+        </div>
+        @foreach (Data.SocietyBarModel soc in PopulateSocList())
+        {
+            <div id="society-bar" class=" my-2 bg-white rounded-3 d-lg-flex flex-row justify-content-between p-1 text-center">
+                <div class="w-25 p-2 m-0 d-flex align-items-center justify-content-center flex-nowrap">
+                    <img id="profile-img" src="@soc.Photo" />
+                </div>
+                <div style="margin-right: 12.5%;" class="d-inline-block align-items-center justify-content-center text-center w-50 text-truncate">
+                    <h2 class="m-0 p-2 w-100 text-wrap" style="word-break: break-word;">@soc.UserName</h2>
+
+                    <p class="m-0 p-2 w-100 text-wrap" style="word-break: break-word;">@soc.Bio</p>
+                </div>
+            </div>
+        }
+    </div>
+
+</body>
+
+
+
+
+@code {
+
+    private string GetAccountType()
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+        return db.GetAccountType(Convert.ToInt32(userId));
+    }
+
+    private string GetName()
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+
+        return db.GetName(Convert.ToInt32(userId));
+    }
+
+    private string GetUserName()
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+
+        return "@" + db.GetUserName(Convert.ToInt32(userId));
+    }
+
+
+
+    private List<Data.SocietyBarModel> PopulateSocList()
+    {
+
+        Data.MySQLDB db = new Data.MySQLDB();
+        List<Data.SocietyBarModel> sB = db.GetAllSocieties();
+        return sB;
+    }
+
+
+    string userId;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await GetSessionUser();
+        StateHasChanged();
+    }
+
+    private async Task GetSessionUser()
+    {
+        userId = await sessionStorage.GetItemAsync<String>("userId");
+    }
+
+}
