@@ -162,3 +162,11 @@ a, .btn-link {
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
+
+#profile-img {
+    height: 75px;
+    width: 75px;
+    object-fit: cover;
+    margin-left: 50px;
+    border-radius: 50%;
+}

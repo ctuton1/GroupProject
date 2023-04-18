@@ -2,6 +2,7 @@
 @using BlazorApp1.Data
 @inject IConfiguration config
 @inject NavigationManager NavManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
 
 <head>
 </head>
@@ -9,33 +10,32 @@
 
     <div id="profile-background">
 
-                <img class="h-50 w-50 rounded-circle profile-bar" src="assets/Profile Icon.svg" />
+        <img class="h-50 w-50 rounded-circle profile-bar" src="@GetProfilePhoto()" />
 
 
         <div id="profile-body-container" class="m-x-5 w-100 bg-white rounded-profile p-3">
 
 
-           
+
             <div id="profile-description-container">
-                
             </div>
 
 
             <div id="profile-edit-container">
-                <InputFile OnChange="@LoadFiles"  class="form-control" accept=".png,.jpg,.jpeg"></InputFile>
+                <InputFile OnChange="@LoadFiles" class="form-control" accept=".png,.jpg,.jpeg"></InputFile>
             </div>
-            @if(errors.Count > 0)
+            @if (errors.Count > 0)
             {
                 <h2>Errors</h2>
                 <ul class="text-danger">
-                    @foreach(var error in errors)
+                    @foreach (var error in errors)
                     {
                         <li>@error</li>
                     }
                 </ul>
             }
 
-            
+
         </div>
     </div>
 
@@ -50,11 +50,12 @@
     private int maxFiles = 1;
     private List<string> errors = new();
 
+    string userId;
 
     private async Task LoadFiles(InputFileChangeEventArgs e)
     {
         errors.Clear();
-        if(e.FileCount > maxFiles) //Check if too many files are uploaded
+        if (e.FileCount > maxFiles) //Check if too many files are uploaded
         {
             errors.Add($"Error: Attempting to upload more files than allowed. Files uploaded: {e.FileCount}. Max Files: {maxFiles}");
             return;
@@ -65,22 +66,19 @@
         {
             try
             {
-                if(Path.GetExtension(file.Name) != "png" ||Path.GetExtension(file.Name) != "jpg"|| Path.GetExtension(file.Name) != "jpeg")
-                {
-                    errors.Add($"Error: File type is not allowed.");
-                    return;
-                }
-                string newFileName = Path.ChangeExtension( //create file name
-                Path.GetRandomFileName(), 
+                
+                    string newFileName = Path.ChangeExtension( //create file name
+                Path.GetRandomFileName(),
                 Path.GetExtension(file.Name));
 
-                string path = Path.Combine(config.GetValue<string>("FileStorage")!, newFileName); //Create file path
+                    string path = Path.Combine("wwwroot\\userphotos\\", newFileName); //Create file path
 
-                await using FileStream fs = new(path, FileMode.Create); //Open file
-                await file.OpenReadStream(maxFileSize).CopyToAsync(fs); //Write file
-                MySQLDB db = new MySQLDB();
-                db.UpdateUserPhoto(file.Name, 1);
-                db.CloseConnection();
+                    await using FileStream fs = new(path, FileMode.Create); //Open file
+                    await file.OpenReadStream(maxFileSize).CopyToAsync(fs); //Write file
+                    MySQLDB db = new MySQLDB();
+                    db.UpdateUserPhoto(newFileName, Convert.ToInt32(userId));
+                    db.CloseConnection();
+
             }
             catch (Exception ex)
             {
@@ -88,5 +86,26 @@
             }
 
         }
+
+    }
+
+    private string GetProfilePhoto()
+    {
+
+        Data.MySQLDB db = new Data.MySQLDB();
+        string photoName = db.GetProfilePhoto(Convert.ToInt32(userId));
+        Console.WriteLine(photoName);
+        string src = $"userphotos\\{photoName}";
+        return src;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetSessionUser();
+    }
+
+    private async Task GetSessionUser()
+    {
+        userId = await sessionStorage.GetItemAsync<String>("userId");
     }
 }

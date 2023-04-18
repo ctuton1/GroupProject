@@ -16,6 +16,7 @@
                 <InputText id="firstName" class="d-block mb-2" placeholder="First Name" @bind-Value="cA.firstName" />
                 <InputText id="lastName" class="d-block mb-2" placeholder="Last Name" @bind-Value="cA.lastName" />
                 <InputSelect id="accountType" class="form-control" @bind-Value="cA.accountType">
+                        <option value="invalid">Select...</option>
                         <option value="student">Student</option>
                         <option value="society">Society</option>
                 </InputSelect>
@@ -54,7 +55,18 @@
 
     private void FormSubmit()
     {
-        Data.MySQLDB db = new Data.MySQLDB();
-        db.CreateUser(cA.userName, cA.password, cA.firstName, cA.lastName, cA.accountType);
+        if(cA.accountType != "invalid")
+        {
+            Data.MySQLDB db = new Data.MySQLDB();
+            if(db.CreateUser(cA))
+            {
+                NavManager.NavigateTo("/profile");
+            }
+        }
+        else
+        {
+            
+        }
+
     }
 }

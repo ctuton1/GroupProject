@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fMnr+feNBmEqt3cDs6qebKltpSv+NPQ3no3AfNvac0M=",
+  "Hash": "ghPUlqHGrhPoJ0De6mDjNKW03BShEcpXdDpvTYmgQPc=",
   "Source": "BlazorApp1",
   "BasePath": "_content/BlazorApp1",
   "Mode": "Default",
@@ -304,6 +304,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\hjwhp3bj.png",
+      "SourceId": "BlazorApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
+      "BasePath": "_content/BlazorApp1",
+      "RelativePath": "UserPhotos/hjwhp3bj.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserPhotos\\hjwhp3bj.png"
+    },
+    {
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\npxyeegd.png",
+      "SourceId": "BlazorApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
+      "BasePath": "_content/BlazorApp1",
+      "RelativePath": "UserPhotos/npxyeegd.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserPhotos\\npxyeegd.png"
     }
   ]
 }
