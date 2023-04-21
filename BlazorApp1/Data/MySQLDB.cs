@@ -373,6 +373,40 @@ namespace BlazorApp1.Data
             return result;
         }
 
+        public void AttendEvent(int eventId, int userId)
+        {
+            OpenConnection();
+            string sql = string.Format($"INSERT INTO UserEvents (UserID, EventID) VALUES ('{userId}', '{eventId}');");
+            MySqlCommand command = con.CreateCommand();
+            command.CommandText = sql;
+            command.ExecuteNonQuery();
+            CloseConnection();
+        }
+
+        public bool CheckUserEvent(int eventId, int userId)
+        {
+            OpenConnection();
+            string sql = string.Format($"SELECT eventId FROM userevents WHERE UserId = '{userId}' AND eventId = '{eventId}';");
+            var cmd = new MySqlCommand(sql, con);
+
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                if (!rdr.IsDBNull(0))
+                {
+                    CloseConnection();
+                    return true;
+                }
+                else
+                {
+                    CloseConnection();
+                    return false;
+                }
+            }
+            CloseConnection();
+            return false;
+        }
+
         private void ClearOldEvents()
         {
             OpenConnection();

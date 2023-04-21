@@ -26,10 +26,22 @@
                     
                         </div>
                     </div>
-                <div class="d-lg-flex flex-row justify-content-end w-100 justify-content: flex-end;">
-                        <p class="fw-bold m-0 align-text-bottom">Attend?</p>
-                        <MudButton id="attend-button">+</MudButton>
-                    </div>
+                    @if(userId != null)
+                    {
+                        @if(CheckIfAttending(eD.Id))
+                        {
+                            <div class="d-lg-flex flex-row justify-content-end w-100 justify-content: flex-end;">
+                                <p class="fw-bold m-0 align-text-bottom">Attend?</p>
+                                <MudButton id="attend-button" @onclick="() => AttendEvent(eD.Id)">✓</MudButton>
+                            </div>
+                        }
+                        else{
+                            <div class="d-lg-flex flex-row justify-content-end w-100 justify-content: flex-end;">
+                                <p class="fw-bold m-0 align-text-bottom">Attend?</p>
+                                <MudButton id="attend-button" @onclick="() => AttendEvent(eD.Id)">+</MudButton>
+                            </div>
+                        }
+                    }
                 </div>
             </div>
         }
@@ -47,6 +59,25 @@
     {
         Data.MySQLDB db = new Data.MySQLDB();
         return db.GetUserName(iD);
+    }
+
+    private bool CheckIfAttending(int eventId)
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+        if(db.CheckUserEvent(eventId, Convert.ToInt32(userId)))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private void AttendEvent(int eventId)
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+        db.AttendEvent(eventId, Convert.ToInt32(userId));
     }
 
     private string GetSocietyPhoto(int iD)
