@@ -552,6 +552,25 @@
           }
         }
       },
+      "MudBlazor/6.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.11",
+          "Microsoft.AspNetCore.Components.Web": "6.0.11"
+        },
+        "compile": {
+          "lib/net6.0/MudBlazor.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/MudBlazor.dll": {}
+        },
+        "build": {
+          "buildTransitive/MudBlazor.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/MudBlazor.props": {}
+        }
+      },
       "MySql.Data/8.0.32.1": {
         "type": "package",
         "dependencies": {
@@ -1902,6 +1921,29 @@
         "version.txt"
       ]
     },
+    "MudBlazor/6.2.2": {
+      "sha512": "q9OcxxoRc5zm3W5ktC+3iCRywnfp/DwVOLO1ykbXColLBb7ZFFu3SMfUnd3Egp5fz1n0GKW5yH3wtQ6mCz6YzQ==",
+      "type": "package",
+      "path": "mudblazor/6.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "Nuget.png",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/MudBlazor.props",
+        "buildMultiTargeting/MudBlazor.props",
+        "buildTransitive/MudBlazor.props",
+        "lib/net6.0/MudBlazor.dll",
+        "lib/net6.0/MudBlazor.xml",
+        "lib/net7.0/MudBlazor.dll",
+        "lib/net7.0/MudBlazor.xml",
+        "mudblazor.6.2.2.nupkg.sha512",
+        "mudblazor.nuspec",
+        "staticwebassets/MudBlazor.min.css",
+        "staticwebassets/MudBlazor.min.js"
+      ]
+    },
     "MySql.Data/8.0.32.1": {
       "sha512": "K5WkZz8hkiHyKSnEON5AER+oMxmwhRrSAy6/a7XnfWpytn8EyYLCFWe0lDNZqZJ/w79P1Qtw0TZvf3kP0a1fbg==",
       "type": "package",
@@ -2993,6 +3035,7 @@
       "Blazored.SessionStorage >= 2.3.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.5",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.5",
+      "MudBlazor >= 6.2.2",
       "MySql.Data >= 8.0.32.1"
     ]
   },
@@ -3053,6 +3096,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.5, )"
+          },
+          "MudBlazor": {
+            "target": "Package",
+            "version": "[6.2.2, )"
           },
           "MySql.Data": {
             "target": "Package",

@@ -180,3 +180,4 @@ C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microso
 C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\Microsoft.JSInterop.dll
 C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Debug\net6.0\MudBlazor.dll

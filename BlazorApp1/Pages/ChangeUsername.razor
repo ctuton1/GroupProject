@@ -22,7 +22,7 @@
                     <InputText id="userName" class="d-block mb-2" placeholder="New Username" @bind-Value="userNameForm.UserName" />
                     <InputText id="password" class="d-block mb-2" placeholder="Password" @bind-Value="userNameForm.Password" />
 
-                    <button type="submit">Submit</button>
+                    <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
                 </EditForm>
                 @if (errors.Count > 0)
                 {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xofit58sLDoxrupKH6gmgvq1jj62pTCgxBpQ12XiLMr55Fi5KLnf/ZxBelO1oGnYTEeBbinK1/0e2SxdwCCK7g==",
+  "dgSpecHash": "V+emqCm6Tj2Xq2tc/n7vp+gEjzc8mNrv9pO8bq3gJMHy0yHunixNOTQz3e7rcxaLViC8zMwL4QdOf8M0EfPKSA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\BlazorApp1.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,7 @@
     "C:\\Users\\Scott\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Scott\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Scott\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Scott\\.nuget\\packages\\mudblazor\\6.2.2\\mudblazor.6.2.2.nupkg.sha512",
     "C:\\Users\\Scott\\.nuget\\packages\\mysql.data\\8.0.32.1\\mysql.data.8.0.32.1.nupkg.sha512",
     "C:\\Users\\Scott\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\Scott\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",

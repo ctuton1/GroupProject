@@ -1,6 +1,7 @@
 ﻿Nuget packages used in this software:
 Mysql.Data (GPL.2.0)
 Blazored SessionStorage (MIT)
+MudBlazor (MIT)
 
 Images used:
 https://www.flaticon.com/free-icon/user_482636 Default profile picture.

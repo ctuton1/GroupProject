@@ -8,7 +8,7 @@ namespace BlazorApp1.Data
         MySqlConnection con;
         public MySQLDB()
         {
-            
+            ClearOldEvents();
         }
 
         private void OpenConnection()
@@ -315,6 +315,73 @@ namespace BlazorApp1.Data
                 result.Add(temp);
             }
             return result;
+        }
+
+        public void AddEvent(EventDataModel eDM)
+        {
+            OpenConnection();
+            string sql = string.Format($"INSERT INTO events (EventName, EventDate, EventDescription, EventOwner) Values ('{eDM.Name}','{eDM.Date.ToString("yyyy-MM-dd HH:mm:ss.fff")}','{eDM.Description}','{eDM.EventOwnerId}');");
+            MySqlCommand command = con.CreateCommand();
+            command.CommandText = sql;
+            command.ExecuteNonQuery();
+            CloseConnection();
+        }
+
+        public List<EventDataModel> GetSocietyEvents(int iD)
+        {
+            OpenConnection();
+            List<EventDataModel> result = new List<EventDataModel>();
+            string sql = string.Format($"Select * From Events WHERE EventOwner = '{iD}'");
+            var cmd = new MySqlCommand(sql, con);
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            int count = rdr.FieldCount;
+            while (rdr.Read())
+            {
+                    EventDataModel temp = new EventDataModel();
+                    temp.Id = Convert.ToInt32(rdr.GetValue(0));
+                    temp.Name = rdr.GetString(1);
+                    temp.Date = rdr.GetDateTime(2);
+                    temp.Description = rdr.GetString(3);
+                    temp.EventOwnerId = Convert.ToInt32(rdr.GetValue(4));
+
+                    result.Add(temp);
+            }
+            CloseConnection();
+            return result;
+        }
+
+        public List<EventDataModel> GetAllEvents()
+        {
+            OpenConnection();
+            List<EventDataModel> result = new List<EventDataModel>();
+            string sql = string.Format($"Select * From Events;");
+            var cmd = new MySqlCommand(sql, con);
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            int count = rdr.FieldCount;
+            while (rdr.Read())
+            {
+                EventDataModel temp = new EventDataModel();
+                temp.Id = Convert.ToInt32(rdr.GetValue(0));
+                temp.Name = rdr.GetString(1);
+                temp.Date = rdr.GetDateTime(2);
+                temp.Description = rdr.GetString(3);
+                temp.EventOwnerId = Convert.ToInt32(rdr.GetValue(4));
+
+                result.Add(temp);
+            }
+            CloseConnection();
+            return result;
+        }
+
+        private void ClearOldEvents()
+        {
+            OpenConnection();
+            DateTime now = DateTime.Now;
+            string sql = string.Format($"DELETE From Events Where EventDate < now();");
+            MySqlCommand command = con.CreateCommand();
+            command.CommandText = sql;
+            command.ExecuteNonQuery();
+            CloseConnection();
         }
 
         public void CloseConnection()

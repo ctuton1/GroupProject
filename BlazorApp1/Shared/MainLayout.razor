@@ -10,10 +10,16 @@
     <main>
         <div class="top-row w-100 justify-content-center" m-0 p-0>
             <a href="" class="ml-0" @onclick="HomePage">Home</a>
-            <a href="" @onclick="Explore">Explore</a> <!--CHANGE WHEN Explore PAGE IS Added-->
+            @if(signedIn && isSociety())
+            {
+                <a href="" @onclick="Create">Create</a>
+            }
+            else{
+                <a href="" @onclick="Explore">Explore</a>
+            }
             <a href="" @onclick="Societies">Societies</a>
             <a href="" @onclick="Calendar">Calendar</a>
-            @if(signedIn)
+            @if (signedIn)
             {
                 <a href="" @onclick="Profile"><img id="small-profile-img" src="@GetProfilePhoto()" /></a>
             }
@@ -28,10 +34,14 @@
             @Body
         </article>
     </main>
+
+    <MudThemeProvider />
+    <MudDialogProvider />
+    <MudSnackbarProvider />
 </div>
 
-@code{
-    bool signedIn = false;  
+@code {
+    bool signedIn = false;
 
     string userId;
 
@@ -53,7 +63,30 @@
             signedIn = false;
         }
     }
+    private bool isSociety()
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+        if (userId != null)
+        {
+            if (db.GetAccountType(Convert.ToInt32(userId)).ToLower() == "society")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
 
+    private void Create()
+    {
+        NavManager.NavigateTo("/createevent");
+    }
     private void HomePage()
     {
         NavManager.NavigateTo("/");
@@ -84,7 +117,7 @@
         NavManager.NavigateTo("/CreateAccount");
     }
 
-     private string GetProfilePhoto()
+    private string GetProfilePhoto()
     {
 
         Data.MySQLDB db = new Data.MySQLDB();
@@ -93,4 +126,5 @@
         string src = $"userphotos\\{photoName}";
         return src;
     }
+
 }

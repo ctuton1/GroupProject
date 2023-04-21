@@ -11,6 +11,7 @@
           "Blazored.SessionStorage": "2.3.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.5",
+          "MudBlazor": "6.2.2",
           "MySql.Data": "8.0.32.1"
         },
         "runtime": {
@@ -426,6 +427,18 @@
             "assetType": "runtime",
             "assemblyVersion": "4.0.2.0",
             "fileVersion": "4.700.19.56404"
+          }
+        }
+      },
+      "MudBlazor/6.2.2": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "6.0.12",
+          "Microsoft.AspNetCore.Components.Web": "6.0.12"
+        },
+        "runtime": {
+          "lib/net6.0/MudBlazor.dll": {
+            "assemblyVersion": "6.2.2.0",
+            "fileVersion": "6.2.2.0"
           }
         }
       },
@@ -986,6 +999,13 @@
       "sha512": "sha512-mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
+    },
+    "MudBlazor/6.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q9OcxxoRc5zm3W5ktC+3iCRywnfp/DwVOLO1ykbXColLBb7ZFFu3SMfUnd3Egp5fz1n0GKW5yH3wtQ6mCz6YzQ==",
+      "path": "mudblazor/6.2.2",
+      "hashPath": "mudblazor.6.2.2.nupkg.sha512"
     },
     "MySql.Data/8.0.32.1": {
       "type": "package",

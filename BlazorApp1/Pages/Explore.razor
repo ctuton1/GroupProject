@@ -7,10 +7,33 @@
 <body>
 
     <div id="profile-background" class="min-vh-100">
-        <div id="event-widget" class=" my-2 bg-white rounded-3 d-lg-flex flex-row justify-content-between p-1 text-center">
-
+        <div id="society-bar" class="my-2 bg-white rounded-3 d-lg-flex flex-row justify-content-between p-1 text-center">
+            <h2>Events:</h2>
         </div>
-        
+        @foreach (Data.EventDataModel eD in GetEvents())
+        {
+            <div id="event-widget" class=" my-2 bg-white rounded-3 d-lg-flex flex-row p-1 text-center">
+                <div class="d-lg-flex flex-column w-100">
+                    <div>
+                        <div id="event-image" class="d-lg-flex flex-row justify-content-center align-items-center text-center">
+                            <img id="profile-img" src="@GetSocietyPhoto(eD.EventOwnerId)" />
+                        </div>
+                        <div id="event-details">
+                        <h2 class="my-5 text-truncate">@eD.Name</H2>
+                        <p class="fw-bold my-5">@eD.Date.ToString()</p>
+                        <p class="my-5 text-truncate">@eD.Description</p>
+                        <p class="my-5 text-truncate">Hosted by: @GetEventOwner(eD.EventOwnerId)</p>
+                    
+                        </div>
+                    </div>
+                <div class="d-lg-flex flex-row justify-content-end w-100 justify-content: flex-end;">
+                        <p class="fw-bold m-0 align-text-bottom">Attend?</p>
+                        <MudButton id="attend-button">+</MudButton>
+                    </div>
+                </div>
+            </div>
+        }
+
     </div>
 
 </body>
@@ -19,6 +42,28 @@
 
 
 @code {
+
+    private string GetEventOwner(int iD)
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+        return db.GetUserName(iD);
+    }
+
+    private string GetSocietyPhoto(int iD)
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+        string photoName = db.GetProfilePhoto(iD);
+        string src = $"userphotos\\{photoName}";
+        return src;
+    }
+
+    private List<Data.EventDataModel> GetEvents()
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+        List<Data.EventDataModel> eDM = db.GetAllEvents();
+        eDM.Sort((x, y) => DateTime.Compare(x.Date, y.Date));
+        return eDM;
+    }
 
     string userId;
 

@@ -7,7 +7,6 @@
 <body>
 
     <div id="profile-background">
-        <button @onclick="ExpandWidget">
             <div id="profile-bar" class="m-x-5 w-75 bg-white rounded-3 m-5 d-lg-flex flex-row justify-content-between p-1 flex-nowrap">
                 <div class="w-25 p-1 d-flex align-items-center justify-content-center flex-nowrap">
                     <img id="profile-img" src="@GetProfilePhoto()" />
@@ -19,7 +18,6 @@
                     <p class="m-0">@GetAccountType() Account</p>
                 </div>
             </div>
-        </button>
         <div id="profile-body-container" class="m-0 m-x-5 w-100 bg-white rounded-profile p-3">
 
 
@@ -29,16 +27,16 @@
                     <h2 class="text-center fw-bold">About:</h2>
                     <InputTextArea id="profile-bio" placeholder="@GetProfileDescription()" @bind-Value="profileBioForm.profileBio"></InputTextArea>
                     <div id="profile-description-submit">
-                        <input class="rounded-3" type="submit" value="Submit" />
+                        <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
                     </div>
                 </EditForm>
             </div>
 
 
             <div id="profile-edit-container">
-                <button class="d-flex rounded-3 m-1" @onclick="ChangeUserName">Change Username</button>
-                <button class="d-flex rounded-3 m-1" @onclick="ChangePassowrd">Change Password</button>
-                <button class="d-flex rounded-3 m-1" @onclick="ChangePhoto">Change Photo</button>
+                <MudButton class="d-flex rounded-3 m-1" @onclick="ChangeUserName">Change Username</MudButton>
+                <MudButton class="d-flex rounded-3 m-1" @onclick="ChangePassowrd">Change Password</MudButton>
+                <MudButton class="d-flex rounded-3 m-1" @onclick="ChangePhoto">Change Photo</MudButton>
             </div>
 
 
@@ -51,11 +49,6 @@
 
 
 @code {
-
-    private void ExpandWidget()
-    {
-        
-    }
 
     private string GetAccountType()
     {

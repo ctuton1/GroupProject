@@ -1,0 +1,111 @@
+﻿@page "/createevent"
+@inject NavigationManager NavManager
+@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+<div id="profile-background">
+    <div id="profile-bar" class="m-x-5 w-75 bg-white rounded-3 m-5 d-lg-flex flex-row justify-content-between p-1 flex-nowrap">
+        <div class="w-25 p-1 d-flex align-items-center justify-content-center flex-nowrap">
+            <img id="profile-img" src="@GetProfilePhoto()" />
+        </div>
+        <div class="p-1 d-flex flex-column align-items-center justify-content-center text-end flex-nowrap">
+            <p class="m-0">@GetUserName()</p>
+            <h2 class="m-0">@GetName()</h2>
+
+            <p class="m-0">@GetAccountType() Account</p>
+        </div>
+    </div>
+    <div id="profile-body-container" class="m-x-5 w-100 bg-white rounded-profile p-3">
+        <div id="profile-description-container">
+            <h2 class="text-center fw-bold">Create Event:</h2>
+            <div id="profile-edit-container" class="justify-content-center text-center">
+                <EditForm Model="@eDM" OnSubmit="@SubmitNewEvent">
+                    <InputText id="eventName" class="d-block my-2 w-100" placeholder="Event Name" @bind-Value="eDM.Name" />
+                    <MudDatePicker class="my-2 w-100" MinDate="DateTime.Now" MaxDate="new DateTime(2050, 12, 31)" DateChanged="OnDateChanged" />
+                    <MudTimePicker  Label="24 hours" class="w-100 my-3" @bind-Time="eDM.Time" />
+                    <InputTextArea id="eventDescription" class="d-block my-2 w-100" placeholder="Event Description" @bind-Value="eDM.Description" />
+                    <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
+                </EditForm>
+
+                @if (errors.Count > 0)
+                {
+                    <ul class="text-danger">
+                        @foreach (var error in errors)
+                        {
+                            <li>@error</li>
+                        }
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<string> errors = new();
+    private string GetAccountType()
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+        return db.GetAccountType(Convert.ToInt32(userId));
+    }
+
+    private string GetName()
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+
+        return db.GetName(Convert.ToInt32(userId));
+    }
+
+    private string GetUserName()
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+
+        return "@" + db.GetUserName(Convert.ToInt32(userId));
+    }
+
+    Data.EventDataModel eDM = new Data.EventDataModel();
+
+    private void OnDateChanged(DateTime? newDate)
+    {
+        eDM.Date = (DateTime) newDate;
+    }
+
+    private void SubmitNewEvent()
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+        TimeSpan temp;
+        if (eDM.Time.HasValue)
+        {
+            temp = eDM.Time.Value;
+        }
+        else
+        {
+            temp = TimeSpan.Zero;
+        }
+        eDM.Date = eDM.Date.Add(temp);
+        eDM.EventOwnerId = Convert.ToInt32(userId);
+        db.AddEvent(eDM);
+    }
+
+    string userId;
+
+    private string GetProfilePhoto()
+    {
+
+        Data.MySQLDB db = new Data.MySQLDB();
+        string photoName = db.GetProfilePhoto(Convert.ToInt32(userId));
+        Console.WriteLine(photoName);
+        string src = $"userphotos\\{photoName}";
+        return src;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await GetSessionUser();
+        StateHasChanged();
+    }
+
+    private async Task GetSessionUser()
+    {
+        userId = await sessionStorage.GetItemAsync<String>
+    ("userId");
+    }
+}
