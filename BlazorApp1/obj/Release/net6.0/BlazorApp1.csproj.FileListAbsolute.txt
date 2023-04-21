@@ -71,3 +71,14 @@ C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\runti
 C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\runtimes\win-x64\native\k5sprt64.dll
 C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\runtimes\win-x64\native\krb5_64.dll
 C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\Blazored.SessionStorage.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\Microsoft.JSInterop.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\MudBlazor.dll
+C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\System.IO.Pipelines.dll

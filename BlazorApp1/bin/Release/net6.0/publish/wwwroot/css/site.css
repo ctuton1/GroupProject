@@ -162,3 +162,59 @@ a, .btn-link {
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
+
+#profile-img {
+    height: 75px;
+    width: 75px;
+    object-fit: cover;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+#small-profile-img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+#change-photo-img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+#society-bar {
+    width: 90%;
+    flex: 1 3;
+    opacity: 0%;
+    animation: appear 0.5s 1;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+#society-button {
+    width: 90%;
+    opacity: 0%;
+    animation: appear 0.5s 1;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+#society-event-box {
+    border: solid;
+    border-width: 1px;
+    width: 100%;
+}
+#eventDescription {
+    height: 200px;
+}
+#event-widget {
+    width: 90%;
+    display: flex;
+    flex: 1 3;
+    opacity: 0%;
+    animation: appear 0.5s 1;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+#attend-button {
+    background-color: #FFB48A;
+}
