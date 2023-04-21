@@ -357,7 +357,6 @@ namespace BlazorApp1.Data
             string sql = string.Format($"Select * From Events;");
             var cmd = new MySqlCommand(sql, con);
             MySqlDataReader rdr = cmd.ExecuteReader();
-            int count = rdr.FieldCount;
             while (rdr.Read())
             {
                 EventDataModel temp = new EventDataModel();
@@ -405,6 +404,28 @@ namespace BlazorApp1.Data
             }
             CloseConnection();
             return false;
+        }
+
+        public List<EventDataModel> GetUserEvents(int userId)
+        {
+            OpenConnection();
+            string sql = string.Format($"SELECT a.eventId, a.eventName, a.eventDate, a.eventDescription, a.eventOwner FROM userevents as a INNER JOIN events as b on a.eventId = b.eventId WHERE b.userId = '{userId}';");
+            var cmd = new MySqlCommand(sql, con);
+            List<EventDataModel> result = new List<EventDataModel>();
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                EventDataModel temp = new EventDataModel();
+                temp.Id = Convert.ToInt32(rdr.GetValue(0));
+                temp.Name = rdr.GetString(1);
+                temp.Date = rdr.GetDateTime(2);
+                temp.Description = rdr.GetString(3);
+                temp.EventOwnerId = Convert.ToInt32(rdr.GetValue(4));
+
+                result.Add(temp);
+            }
+            CloseConnection();
+            return result;
         }
 
         private void ClearOldEvents()
