@@ -29,7 +29,7 @@
         }
 
         th, td {
-            background-color: #96D4D4;
+            background-color: #ffb4a4;
         }
 
     </style>
@@ -80,8 +80,10 @@
                     int day = weekIndex * 7 + (dayIndex + 1);
                     string date = ""+day+"/" + GetSelectedMonth()+"/2023";
                     int id=-1;
-                    <td>
-                        <h5>@day</h5>
+                    <td style="vertical-align: top; text-align: left; width:100px; height:100px">
+                        <h5>
+                            @day
+                        </h5>
                           @foreach (Data.EventDataModel eD in GetUserEvents())
                             {
                             string dateComparison = @eD.Date.Date.ToString();
@@ -102,6 +104,7 @@
 
 
                     </td>
+                    
                 }
             </tr>
         }
@@ -176,8 +179,6 @@
         DeleteDialogOpen = true;
         dateSelected = date;
         deleteId = id;
-        //Data.MySQLDB db = new Data.MySQLDB();
-        //db.DeleteEvent(id); 
         StateHasChanged();
 
     }
