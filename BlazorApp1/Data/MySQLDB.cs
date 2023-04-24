@@ -431,11 +431,29 @@ namespace BlazorApp1.Data
         private void ClearOldEvents()
         {
             OpenConnection();
-            DateTime now = DateTime.Now;
-            string sql = string.Format($"DELETE From Events Where EventDate < now();");
-            MySqlCommand command = con.CreateCommand();
-            command.CommandText = sql;
-            command.ExecuteNonQuery();
+            string sql = string.Format($"Select a.eventId From userEvents as a INNER JOIN events as b ON a.eventId = b.eventId WHERE b.EventDate < now();");
+            var cmd = new MySqlCommand(sql, con);
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            List<int> temp = new List<int>();
+            while (rdr.Read())
+            {
+                temp.Add(Convert.ToInt32(rdr.GetValue(0)));
+            }
+            CloseConnection();
+            foreach (int id in temp)
+            {
+                OpenConnection();
+                string sql3 = string.Format($"DELETE From userEvents Where eventId = '{id}';");
+                MySqlCommand command3 = con.CreateCommand();
+                command3.CommandText = sql3;
+                command3.ExecuteNonQuery();
+                CloseConnection();
+            }
+            OpenConnection();
+            string sql2 = string.Format($"DELETE From Events Where EventDate < now();");
+            MySqlCommand command2 = con.CreateCommand();
+            command2.CommandText = sql2;
+            command2.ExecuteNonQuery();
             CloseConnection();
         }
         public void DeleteEvent(int id)

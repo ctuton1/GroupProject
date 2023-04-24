@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LxVZTGjdIKMrcMUTtZo3q3vmkh7OkKNyzvtro78E1p4=",
+  "Hash": "F4tq7QhrGT37syRhug4FLNLOx29jHCKidAcomCorG64=",
   "Source": "BlazorApp1",
   "BasePath": "_content/BlazorApp1",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "BlazorApp1\\wwwroot",
       "Source": "BlazorApp1",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\owner\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\MudBlazor.min.css",
+      "Identity": "C:\\Users\\Scott\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\MudBlazor.min.css",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\owner\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Scott\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\owner\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\MudBlazor.min.css"
+      "OriginalItemSpec": "C:\\Users\\Scott\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\MudBlazor.min.css"
     },
     {
-      "Identity": "C:\\Users\\owner\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\MudBlazor.min.js",
+      "Identity": "C:\\Users\\Scott\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\MudBlazor.min.js",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\owner\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Scott\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.js",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\owner\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\MudBlazor.min.js"
+      "OriginalItemSpec": "C:\\Users\\Scott\\.nuget\\packages\\mudblazor\\6.2.2\\staticwebassets\\MudBlazor.min.js"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorApp1.styles.css",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorApp1.styles.css",
       "SourceId": "BlazorApp1",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "BlazorApp1.styles.css",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorApp1.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BlazorApp1.styles.css"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css",
       "SourceId": "BlazorApp1",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "BlazorApp1.bundle.scp.css",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BlazorApp1.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\css\\site.css",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\favicon.ico",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\41hmaasf.png",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\41hmaasf.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/41hmaasf.png",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\41hmaasf.png"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\55lvzavm.png",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\55lvzavm.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/55lvzavm.png",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\55lvzavm.png"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\aaigc3ec.png",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\aaigc3ec.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/aaigc3ec.png",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\aaigc3ec.png"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\default.png",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\default.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/default.png",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\default.png"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\et2qoref.png",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\et2qoref.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/et2qoref.png",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\et2qoref.png"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\hjwhp3bj.png",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\hjwhp3bj.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/hjwhp3bj.png",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\hjwhp3bj.png"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\lqs31apv.jpg",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\lqs31apv.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/lqs31apv.jpg",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\lqs31apv.jpg"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\lxehrbti.png",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\lxehrbti.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/lxehrbti.png",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\lxehrbti.png"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\mgnpfrmn.jpg",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\mgnpfrmn.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/mgnpfrmn.jpg",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\mgnpfrmn.jpg"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\n3cpv2rj.png",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\n3cpv2rj.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/n3cpv2rj.png",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\n3cpv2rj.png"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\nndplted.jpg",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\nndplted.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/nndplted.jpg",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\nndplted.jpg"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\npxyeegd.png",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\npxyeegd.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/npxyeegd.png",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\npxyeegd.png"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\vkrjso2f.jpg",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\vkrjso2f.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/vkrjso2f.jpg",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\vkrjso2f.jpg"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\vypq3b2b.jpg",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\vypq3b2b.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/vypq3b2b.jpg",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\vypq3b2b.jpg"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\z31jrzj3.png",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\z31jrzj3.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/z31jrzj3.png",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\z31jrzj3.png"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\zk3x1e4v.png",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\zk3x1e4v.png",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/zk3x1e4v.png",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\UserPhotos\\zk3x1e4v.png"
     },
     {
-      "Identity": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\UserPhotos\\zpfzknij.jpg",
+      "Identity": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\UserPhotos\\zpfzknij.jpg",
       "SourceId": "BlazorApp1",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\OneDrive\\Documents\\GroupProj3\\BlazorApp1\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Scott\\Documents\\GitHub\\GroupProject\\BlazorApp1\\wwwroot\\",
       "BasePath": "_content/BlazorApp1",
       "RelativePath": "UserPhotos/zpfzknij.jpg",
       "AssetKind": "All",

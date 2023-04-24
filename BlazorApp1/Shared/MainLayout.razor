@@ -18,9 +18,9 @@
                 <a href="" @onclick="Explore">Explore</a>
             }
             <a href="" @onclick="Societies">Societies</a>
-            <a href="" @onclick="Calendar">Calendar</a>
             @if (signedIn)
             {
+                <a href="" @onclick="Calendar">Calendar</a>
                 <a href="" @onclick="Profile"><img id="small-profile-img" src="@GetProfilePhoto()" /></a>
             }
             else
