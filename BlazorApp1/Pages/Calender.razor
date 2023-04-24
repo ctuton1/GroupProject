@@ -1,6 +1,25 @@
-﻿@page "/calender"
+﻿@inject Blazored.SessionStorage.ISessionStorageService sessionStorage
+
+@page "/calender"
 @using BlazorApp1.Data
 <h1>Calendar</h1>
+@if (DeleteDialogOpen)
+{
+    @foreach (Data.EventDataModel eD in GetUserEvents())
+    {
+        string dateComparison = @eD.Date.Date.ToString();
+        string[] split = dateComparison.Split(" 00:00");
+        dateComparison = split[0];
+        if (dateComparison==dateSelected)
+        {
+           string owner= GetEventOwner(eD.EventOwnerId);
+          <ModalDialogue Title="@eD.Name" StartDate="eD.Date" EventOrganiser="@owner" Description="@eD.Description" OnClose="@OnDeleteDialogClose"></ModalDialogue>
+
+
+        }
+       
+    }
+}
 
 <head>
     <style>
@@ -59,18 +78,108 @@
                 @for (var dayIndex = 0; dayIndex < weeks[weekIndex].Dates.Count(); dayIndex++)
                 {
                     int day = weekIndex * 7 + (dayIndex + 1);
+                    string date = ""+day+"/" + GetSelectedMonth()+"/2023";
+                    int id=-1;
                     <td>
-                        @day
+                        <h5>@day</h5>
+                          @foreach (Data.EventDataModel eD in GetUserEvents())
+                            {
+                            string dateComparison = @eD.Date.Date.ToString();
+                            string[] split = dateComparison.Split(" 00:00");
+                            dateComparison = split[0];
+                            if (dateComparison==date)
+                            {
+                                id = eD.Id;
+                                <div id="event-details">
+                                    <b><u>@eD.Name</u></b> 
+                                    
+                                    </div>
+                                }
+                            }  
+                        
+                        <button type="button" class="btn btn-link" @onclick="()=>OnDeleteDialogOpen(date,id)" data-bs-toggle="modal" data-bs-target="#modal">View Event</button>
 
 
-                        @* [@weekIndex@dayIndex]*@
                     </td>
                 }
             </tr>
         }
     </tbody>
 </table>
+
 @code {
+    string userId;
+    string month;
+    int day;
+    private string GetEventOwner(int iD)
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+        return db.GetUserName(iD);
+    }
+
+    private string GetSelectedMonth()
+    {
+        return month;
+    }
+    private int getDay()
+    {
+        return day;
+    }
+    private void SetSelectedMonth(string monthChosen)
+    {
+        month=monthChosen;
+    }
+    private void setDay(int daySelected)
+    {
+        daySelected = day;
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await GetSessionUser();
+        StateHasChanged();
+    }
+
+
+    private async Task GetSessionUser()
+    {
+        userId = await sessionStorage.GetItemAsync<String>("userId");
+    }
+
+    public bool DeleteDialogOpen { get; set; }
+
+    private List<EventDataModel> GetUserEvents()
+    {
+        Data.MySQLDB db = new Data.MySQLDB();
+        List<EventDataModel> events = db.GetUserEvents(Convert.ToInt32(userId));
+        return events;
+    }
+
+    
+    private void OnDeleteDialogClose(bool accepted)
+    {
+        DeleteDialogOpen = false;
+        if (accepted==true)
+        {
+           DeleteDialogOpen = false;
+        Data.MySQLDB db = new Data.MySQLDB();
+        db.DeleteEvent(deleteId);
+        StateHasChanged(); 
+        }
+        StateHasChanged();
+
+    }
+    private string dateSelected;
+    private int deleteId;
+    private void OnDeleteDialogOpen(string date, int id)
+    {
+        DeleteDialogOpen = true;
+        dateSelected = date;
+        deleteId = id;
+        //Data.MySQLDB db = new Data.MySQLDB();
+        //db.DeleteEvent(id); 
+        StateHasChanged();
+
+    }
     string[] monthNames = new string[11];
     List<string> days = new List<string>();
     List<WeekClass> weeks = new List<WeekClass>();
@@ -81,6 +190,8 @@
         //monthNames = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthGenitiveNames.ToArray();
         GenerateCalenderHead();
         GenerateCalenderBody();
+
+        //GenrateCalendarEvents();
     }
 
     private void LoadCalender(ChangeEventArgs e)
@@ -92,7 +203,11 @@
         endDate = (new DateTime(DateTime.Now.Year, monthIndex, 1)).AddMonths(1).AddDays(-1);
         GenerateCalenderHead();
         GenerateCalenderBody();
+        SetSelectedMonth(month);
+        
+
     }
+    
     private void GenerateCalenderHead()
     {
         var day1 = new List<string>();
@@ -102,6 +217,7 @@
         }
         days = day1.Distinct().ToList();
     }
+
     private void GenerateCalenderBody()
     {
         weeks = new List<WeekClass>();
@@ -112,12 +228,17 @@
         int countDays = 0;
         for (var calDate = startDate; calDate <= endDate; calDate = calDate.AddDays(1))
         {
+
             flag++;
             dates.Add(new CalanderEvent()
                 {
                     DateValue = calDate.ToString("dd-MMM-yyyy"),
-                    DayName = calDate.ToString("dddd")
+                    DayName = calDate.ToString("dddd"),
+    
+                    //TODO put event in the day
+                    
                 });
+                
             if (flag == 7)
             {
                 week = new WeekClass();

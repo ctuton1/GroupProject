@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\BlazorApp1",
-    "\\BlazorApp1\\Data",
-    "\\BlazorApp1\\Pages",
-    "\\SQL Database"
+    "\\BlazorApp1\\Pages"
   ],
-  "SelectedNode": "\\BlazorApp1\\Pages\\Calender.razor",
+  "SelectedNode": "\\BlazorApp1\\Pages\\CreateEvent.razor",
   "PreviewInSolutionExplorer": false
 }

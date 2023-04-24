@@ -1,0 +1,49 @@
+﻿@*used on the calendar page, when clicking on an event*@
+<div class="modal-fade show" id="modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog.modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Title</h5>
+                <button type="button" class="btn-close" @onclick="@ModalCancel" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Start Date: @StartDate</p>
+                <p>Event Organiser: @EventOrganiser</p>
+                @*<p>Time: @Time </p>*@
+                <p>Description: @Description</p>
+                @*<p>Contact Details: @Email </p>*@
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" @onclick="@ModalCancel" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" @onclick="@ModalOk">Unsubscribe from event</button>
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public DateTime StartDate { get; set; }
+    [Parameter]
+    public string EventOrganiser { get; set; }
+    [Parameter]
+    public string Location { get; set; }
+    [Parameter]
+    public string Email { get; set; }
+    [Parameter]
+    public string Description { get; set; }
+    [Parameter]
+    public EventCallback<bool> OnClose { get; set; }
+    
+    private Task ModalCancel()
+    {
+        return OnClose.InvokeAsync(false);
+    }
+    private Task ModalOk()
+    {
+        return OnClose.InvokeAsync(true);
+    }
+
+}

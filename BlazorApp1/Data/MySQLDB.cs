@@ -113,10 +113,10 @@ namespace BlazorApp1.Data
             switch(cA.accountType.ToLower())
             {
                 case "student":
-                    accountTypeID = 3; //change for server
+                    accountTypeID = 9; //change for server
                 break;
                 case "society":
-                    accountTypeID = 2; //change for server
+                    accountTypeID = 8; //change for server
                     break;
                 default:
                     CloseConnection();
@@ -409,7 +409,7 @@ namespace BlazorApp1.Data
         public List<EventDataModel> GetUserEvents(int userId)
         {
             OpenConnection();
-            string sql = string.Format($"SELECT a.eventId, a.eventName, a.eventDate, a.eventDescription, a.eventOwner FROM userevents as a INNER JOIN events as b on a.eventId = b.eventId WHERE b.userId = '{userId}';");
+            string sql = string.Format($"SELECT b.eventId, b.eventName, b.eventDate, b.eventDescription, b.eventOwner FROM userevents as a INNER JOIN events as b on a.eventId = b.eventId WHERE a.userId = '{userId}';");
             var cmd = new MySqlCommand(sql, con);
             List<EventDataModel> result = new List<EventDataModel>();
             MySqlDataReader rdr = cmd.ExecuteReader();
@@ -438,7 +438,15 @@ namespace BlazorApp1.Data
             command.ExecuteNonQuery();
             CloseConnection();
         }
-
+        public void DeleteEvent(int id)
+        {
+            OpenConnection();
+            string sql = string.Format($"DELETE From userevents Where EventID = '{id}'; "); 
+            MySqlCommand command = con.CreateCommand();
+            command.CommandText = sql;
+            command.ExecuteNonQuery();
+            CloseConnection();
+        }
         public void CloseConnection()
         {
             con.Close();
