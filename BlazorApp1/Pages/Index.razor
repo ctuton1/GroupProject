@@ -1,4 +1,4 @@
-﻿@page "/Home"
+﻿@page "/"
 @inject NavigationManager NavManager
 
 <PageTitle>HomePage</PageTitle>
@@ -14,28 +14,7 @@ of contact details for local venues and facilities.
 As this is the home page for the app, all other pages can be accessed from here and all have a button to
 return to this page.
 
-<div id="home-page-navigation">
-    <button class="d-flex rounded-3 m-1" @onclick="EventList">Events</button>
-    <button class="d-flex rounded-3 m-1" @onclick="VenuesList">Book a Venue</button>
-    <button class="d-flex rounded-3 m-1" @onclick="CreatePost">Create a Post</button>
-    <button class="d-flex rounded-3 m-1" @onclick="RegisterSociety">Register a society</button>
-</div>
 
 @code {
-    private void EventList()
-    {
-        NavManager.NavigateTo("/profile/EventList");
-    }
-    private void VenuesList()
-    {
-        NavManager.NavigateTo("/profile/VenuesList");
-    }
-    private void CreatePost()
-    {
-        NavManager.NavigateTo("/profile/CreatePost");
-    }
-    private void RegisterSociety()
-    {
-        NavManager.NavigateTo("/profile/RegisterSociety");
-    }
+
 }

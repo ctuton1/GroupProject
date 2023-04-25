@@ -5,6 +5,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\bin\Release\net6.0\publish\</_PublishTargetUrl>
-    <History>True|2023-04-21T02:41:52.8052490Z;True|2023-04-21T03:36:52.4533587+01:00;True|2023-04-17T12:35:06.6210138+01:00;True|2023-04-17T12:23:57.5388947+01:00;True|2023-04-12T19:26:26.6958463+01:00;</History>
+    <History>True|2023-04-25T13:54:03.8499000Z;True|2023-04-21T03:41:52.8052490+01:00;True|2023-04-21T03:36:52.4533587+01:00;True|2023-04-17T12:35:06.6210138+01:00;True|2023-04-17T12:23:57.5388947+01:00;True|2023-04-12T19:26:26.6958463+01:00;</History>
   </PropertyGroup>
 </Project>

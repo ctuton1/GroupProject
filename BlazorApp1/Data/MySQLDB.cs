@@ -113,10 +113,10 @@ namespace BlazorApp1.Data
             switch(cA.accountType.ToLower())
             {
                 case "student":
-                    accountTypeID = 9; //change for server
+                    accountTypeID = 3; //change for server
                 break;
                 case "society":
-                    accountTypeID = 8; //change for server
+                    accountTypeID = 2; //change for server
                     break;
                 default:
                     CloseConnection();
