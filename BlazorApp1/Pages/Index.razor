@@ -1,10 +1,41 @@
-﻿@page "/"
+﻿@page "/Home"
+@inject NavigationManager NavManager
 
-<PageTitle>Index</PageTitle>
+<PageTitle>HomePage</PageTitle>
+<style></style>
+<h1>Society Planning App</h1>
 
-<h1>Hello, world!</h1>
+Welcome to our society planning application, here you are able to navigate to other pages using the buttons,
+These buttons will allow you to view a list of upcoming events put on by various societies.
+You can also see which events you have saved and would like to attend by using the calendar page.
+Society event coordinators can create a post about one of their upcoming events as well as access a list
+of contact details for local venues and facilities.
 
-Welcome to your new app.
+As this is the home page for the app, all other pages can be accessed from here and all have a button to
+return to this page.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<div id="home-page-navigation">
+    <button class="d-flex rounded-3 m-1" @onclick="EventList">Events</button>
+    <button class="d-flex rounded-3 m-1" @onclick="VenuesList">Book a Venue</button>
+    <button class="d-flex rounded-3 m-1" @onclick="CreatePost">Create a Post</button>
+    <button class="d-flex rounded-3 m-1" @onclick="RegisterSociety">Register a society</button>
+</div>
 
+@code {
+    private void EventList()
+    {
+        NavManager.NavigateTo("/profile/EventList");
+    }
+    private void VenuesList()
+    {
+        NavManager.NavigateTo("/profile/VenuesList");
+    }
+    private void CreatePost()
+    {
+        NavManager.NavigateTo("/profile/CreatePost");
+    }
+    private void RegisterSociety()
+    {
+        NavManager.NavigateTo("/profile/RegisterSociety");
+    }
+}

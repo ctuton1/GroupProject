@@ -9,97 +9,97 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlazorApp1
 build_property.RootNamespace = BlazorApp1
-build_property.ProjectDir = C:\Users\owner\OneDrive\Documents\GroupProj3\BlazorApp1\
+build_property.ProjectDir = C:\Users\579938\Source\Repos\GroupProject\BlazorApp1\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\owner\OneDrive\Documents\GroupProj3\BlazorApp1
+build_property.MSBuildProjectDirectory = C:\Users\579938\Source\Repos\GroupProject\BlazorApp1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/App.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Components/ModalDialogue.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Components/ModalDialogue.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb2RhbERpYWxvZ3VlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/Calender.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/Calender.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FsZW5kZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/ChangePassword.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/ChangePassword.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbmdlUGFzc3dvcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/ChangePhoto.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/ChangePhoto.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbmdlUGhvdG8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/ChangeUsername.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/ChangeUsername.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbmdlVXNlcm5hbWUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/Counter.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/CreateAccount.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/CreateAccount.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlQWNjb3VudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/CreateEvent.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/CreateEvent.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlRXZlbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/Explore.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/Explore.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwbG9yZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/FetchData.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/Index.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/Profile.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/Profile.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/SignIn.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/SignIn.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2lnbkluLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/Societies.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/Societies.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29jaWV0aWVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Shared/SurveyPrompt.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/_Imports.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Shared/MainLayout.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-45rkf8v3vv
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Shared/NavMenu.razor]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-b5wscdn8ts
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/Error.cshtml]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/_Host.cshtml]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/owner/OneDrive/Documents/GroupProj3/BlazorApp1/Pages/_Layout.cshtml]
+[C:/Users/579938/Source/Repos/GroupProject/BlazorApp1/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

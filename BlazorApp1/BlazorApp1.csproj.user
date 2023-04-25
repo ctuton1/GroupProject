@@ -4,7 +4,7 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-    <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
+    <ActiveDebugProfile>BlazorApp1</ActiveDebugProfile>
     <RazorPage_SelectedScaffolderID>RazorPageScaffolder</RazorPage_SelectedScaffolderID>
     <RazorPage_SelectedScaffolderCategoryPath>root/Common/RazorPage</RazorPage_SelectedScaffolderCategoryPath>
     <NameOfLastUsedPublishProfile>C:\Users\Scott\Documents\GitHub\GroupProject\BlazorApp1\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
